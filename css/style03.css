@@ -2,53 +2,46 @@
 /* @import url(normalize.css); */
 
 body {
-    background-color: #fafafa;
+    background-color: #f0f0f0;
+    padding: 10px; /* 要素内の空白 */
+    font-size: 14px; /* 文字の大きさを14pxに */
+    color: #666; /* グレー */
 }
 
-h1 {
-    /* background-color: rgb(50%, 50%, 0%); */
-    font-size: 24px;
+.container {
+    width: 800px; /* 幅を800pxに */
+    margin: 0 auto; /*左右の余白をautoにして左右中央揃えに*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3) /* 影 */
+}
+
+header {
+    background-color: #422814; /* 背景色を茶色に */
+    padding: 10px; /* 要素ない空白を10pxに */
+    color: #fff; /* 文字色を白に */
+}
+
+header h1 {
     margin: 0;
+    font-size: 24px;
+    font-weight: normal;    /* 文字の太さを太くしない */
+    text-align: center; /* テキストを中央揃えに */
 }
 
-.content {
-    background-color: #fff; /* 16進数カラーコード */
-    width: 600px;
-    margin: 10px auto;
-    border: 1px solid #d1d1d1;
-    padding: 30px; /* 要素内の余白 */
+.description img {
+    float: left;
+    margin: 0 10px 10px 0;
 }
 
-.control {
-    margin-bottom: 3em;
+.information h1 {
+    font-size: 18px;
+    margin: 0 10px 10px 0; /* 余白を下と右に10pxずつ */
+    float: left;
 }
 
-input {
-    border-bottom: 1px solid #d1d1d1;
-    font-size: 1.2em;
-    width: 100%;
-    padding: 8px;
-}
-
-button {
-    width: 100%;
-    background-color: #2096F3;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px; /* 丸みを帯びる */
-    box-shadow: 0 0 8px rgba(0, 0, 0, .4);
-}
-
-label {
-    display: block; /* インラインとブロックの切り替え インラインのままでは改行されない*/
-    margin-bottom: .5em;
-}
-
-.required {
-    margin-left: .3em;
-    color: #f33; 
-    font-size: .6em;
-    padding: 3px;
-    background-color: #fee;
-    font-weight: bold; /* 太字 */
+.information .type {
+    display: inline; /* インラインスタイルに変更 */
+    background-color: #E35A4D; /* 背景色をピンクに */
+    padding: 3px 5px; /* 要素内空白を上下3px, 左右5pxに */
+    font-size: 80%; /* 文字の大きさを少し小さく */
+    color: #fff;  /* 文字色を白に */
 }
