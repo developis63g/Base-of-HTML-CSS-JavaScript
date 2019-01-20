@@ -45,3 +45,44 @@ header h1 {
     font-size: 80%; /* 文字の大きさを少し小さく */
     color: #fff;  /* 文字色を白に */
 }
+
+.description {
+    clear: left;
+}
+
+.content {
+    background-color: #fff; 
+    padding: 20px;  /* 要素内余白を20px */
+}
+
+.songs {
+    margin: 0 0 20px; /* 下の空白のみ 20pxに */
+}
+
+.songs h2 {
+    clear: left;    /* 紹介文の画像回り込みが影響しないようにclear */
+    font-size: 100%;   /* フォントの大きさを本文と同じに */
+    font-weight: normal; /* フォントの太さを通常通りに */
+    margin: 0;  /* 余白はなくす */
+    background-color: #E6E4DD;  /* 背景色を薄い茶色に */
+    padding: 5px 10px;  /* 要素内の余白を上下5px、左右10pxに */
+}
+
+.songs ol {
+    padding: 0; /* 要素内余白をなくす */
+    margin: 0;  /* 余白はなくす */
+    list-style: decimal inside; /* リストのスタイルを算用数字に */
+}
+
+.songs li {
+    border-bottom: 1px solid #CCC;  /* 要素の下にのみ枠線を引く */
+    width: 50%; /* 要素の幅を50%に */
+    float: left;    /* 左に回り込み */
+    padding: 5px 10px;  /* 要素ない余白を上下5px 左右10pxに */
+}
+
+.clearfix:after{
+    content: " ";
+    display: table;
+    clear: both;
+}
