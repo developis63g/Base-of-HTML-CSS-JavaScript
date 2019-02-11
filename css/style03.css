@@ -1,5 +1,6 @@
 @import url(sanitize.css); /* sanitizeで最初に初期化 */
 /* @import url(normalize.css); */
+@import url("https://fonts.googleapis.com/css?family=Exo+2"); /* Webフォントのリンク */
 
 body {
     background-color: #f0f0f0;
@@ -25,11 +26,19 @@ header h1 {
     font-size: 24px;
     font-weight: normal;    /* 文字の太さを太くしない */
     text-align: center; /* テキストを中央揃えに */
+    font-family: 'Exo 2', sans-serif; /* フォント変更(Webフォント) */
 }
 
 .description img {
     float: left;
     margin: 0 10px 10px 0;
+    /* アニメーション */
+    transition: opacity 1s ease 0s;
+/*  transition-property: opacity;   対象となるcssプロパティ
+    transition-duration: 1s;        トランジションにかかる時間
+    transition-timing-function: ease;トランジションの処理
+    transition-delay: 0s;           ディレイ
+*/
 }
 
 .information h1 {
@@ -85,4 +94,35 @@ header h1 {
     content: " ";
     display: table;
     clear: both;
+}
+
+footer {
+    text-align: left;
+    font-size: 80%;
+}
+
+.description img:hover {
+    opacity: .5;    /* 不透明度 */
+}
+
+/* メディアクエリー(スマホ対応) */
+@media only screen and (max-width : 600px) {    /* 横幅が600px以下の場合 */
+    .description img {
+        float: none;    /* 回り込み解除 */
+        display: block; /* 表示をブロック状態にする */
+        margin: 0 auto; /* 画像を中央揃え */
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 12px;    /* 文字サイズを少し小さくする */
+    }
+
+    .songs li {
+        float: none;    /* 回り込み解除 */
+        width: inherit; /* 親要素を引き継ぐ(幅をもとに戻す) */
+    }
 }
